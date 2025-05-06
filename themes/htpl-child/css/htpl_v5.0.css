@@ -1,0 +1,121 @@
+/* ==========================================================================
+   HTPL v5.0 Global Stylesheet
+   Designed for use with Elementor + Hello + HTPL Child Theme
+   --------------------------------------------------------------------------
+   All colors and typography should use Elementor global tokens:
+   https://elementor.com/help/global-colors/
+========================================================================== */
+
+/* -------------------------------------------------
+   VARIABLES (Elementor global tokens)
+-------------------------------------------------- */
+
+/* Use CSS variables set by Elementor Global Colors */
+:root {
+  /* Colors defined in Elementor → Site Settings → Global Colors */
+  /* e.g., var(--e-global-color-primary) */
+}
+
+/* -------------------------------------------------
+   TYPOGRAPHY UTILITY CLASSES
+-------------------------------------------------- */
+
+.text-eyebrow {
+  font-family: var(--e-global-typography-eyebrow-font-family);
+  font-size: var(--e-global-typography-eyebrow-font-size);
+  font-weight: var(--e-global-typography-eyebrow-font-weight);
+  letter-spacing: var(--e-global-typography-eyebrow-letter-spacing);
+  text-transform: uppercase;
+  color: var(--e-global-color-primary);
+}
+
+.text-subheading {
+  font-family: var(--e-global-typography-subheading-font-family);
+  font-size: var(--e-global-typography-subheading-font-size);
+  font-weight: var(--e-global-typography-subheading-font-weight);
+  line-height: var(--e-global-typography-subheading-line-height);
+  color: var(--e-global-color-primary);
+}
+
+/* -------------------------------------------------
+   BADGES (content_type, eresource_type, etc.)
+-------------------------------------------------- */
+
+.badge {
+  display: inline-block;
+  padding: 0.25em 0.5em;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border-radius: 0.375rem;
+  line-height: 1.2;
+  color: #fff;
+}
+
+/* Examples with Elementor global colors */
+.badge-eresource       { background-color: var(--e-global-color-teal); }
+.badge-announcement    { background-color: var(--e-global-color-orange); color: var(--e-global-color-primary); }
+.badge-document        { background-color: var(--e-global-color-primary); }
+.badge-event           { background-color: var(--e-global-color-sky-blue); color: var(--e-global-color-primary); }
+.badge-tutorial        { background-color: var(--e-global-color-sail-blue); }
+.badge-library-service { background-color: var(--e-global-color-gray); }
+
+/* -------------------------------------------------
+   BUTTON ENHANCEMENTS
+-------------------------------------------------- */
+
+.button,
+.elementor-button {
+  border-radius: 0.5rem;
+  font-family: var(--e-global-typography-accent-font-family);
+  font-weight: 600;
+  padding: 0.75em 1.5em;
+  background-color: var(--e-global-color-secondary);
+  color: var(--e-global-color-white);
+}
+
+.button:hover,
+.elementor-button:hover {
+  background-color: var(--e-global-color-teal-hover);
+  color: var(--e-global-color-white);
+}
+
+/* -------------------------------------------------
+   FORMS
+-------------------------------------------------- */
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+textarea,
+select {
+  font-family: var(--e-global-typography-text-font-family);
+  font-size: var(--e-global-typography-text-font-size);
+  background-color: var(--e-global-color-offwhite);
+  color: var(--e-global-color-gray);
+  padding: 0.75em;
+  border: 1px solid #ccc;
+  border-radius: 0.375rem;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--e-global-color-secondary);
+  outline: none;
+}
+
+/* -------------------------------------------------
+   LAYOUT HELPERS
+-------------------------------------------------- */
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.section {
+  padding: 4rem 1rem;
+}
+
+/* Add any future layout, spacing, or utility classes here */

@@ -1,0 +1,11 @@
+# WordPress core files
+/wp-admin/
+/wp-includes/
+/wp-content/uploads/
+/wp-content/plugins/
+/wp-content/themes/hello-elementor/
+
+# OS/system files
+.DS_Store
+Thumbs.db
+*.zip

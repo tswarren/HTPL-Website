@@ -1,0 +1,89 @@
+/** Content Type Badge */
+
+.content-type-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4em;
+  padding: 0.3em 0.6em;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border-radius: 999px;
+  background-color: var(--badge-color, #ccc);
+  color: #fff;
+  line-height: 1.2;
+}
+.content-type-badge i {
+  margin-right: 0.25em;
+}
+
+/* Alert Bar */
+.htpl-alert-bar {
+    width: 100%;
+    padding: 1em;
+    text-align: center;
+    font-weight: bold;
+    color: #ffffff;
+}
+.htpl-alert-bar-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.alert-info {
+    background-color: #007C91; /* Teal */
+}
+.alert-warning {
+    background-color: #FFAA4C; /* Orange */
+}
+.alert-danger {
+    background-color: #7E292B; /* Garnet/Red */
+}
+
+.htpl-alert-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    width: 100%;
+    padding: 1em;
+    text-align: center;
+    font-weight: bold;
+    color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.htpl-alert-bar-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.alert-info {
+    background-color: #007C91;
+}
+.alert-warning {
+    background-color: #FFAA4C;
+}
+.alert-danger {
+    background-color: #7E292B;
+}
+
+/* Add space so content isn't hidden underneath */
+body {
+    padding-top: 4em; /* Adjust based on actual alert height */
+}
+
+#htpl-alert-close {
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 1.5em;
+    cursor: pointer;
+    line-height: 1;
+    padding: 0;
+    margin-left: 1em;
+}
+#htpl-alert-close:hover {
+    opacity: 0.8;
+}
+

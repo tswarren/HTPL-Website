@@ -108,3 +108,20 @@ function htpl_debug_post_context() {
     return "<pre>Current Post ID: $post_id\nPost Type: $post_type\nPost Title: $title</pre>";
 }
 add_shortcode( 'htpl_post_context', 'htpl_debug_post_context' );
+
+// =========== DEBUGGING ===================
+add_action( 'init', function() {
+    if ( ! class_exists( 'Pods' ) ) {
+        return;
+    }
+
+    // Force-load Pod object
+    $pod = pods( 'htpl_eresources' );
+
+    // Optionally log success to error_log for debug
+    if ( $pod && ! is_wp_error( $pod ) ) {
+        error_log( '✅ htpl_eresources Pod loaded successfully.' );
+    } else {
+        error_log( '❌ Failed to load htpl_eresources Pod.' );
+    }
+} );

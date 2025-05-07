@@ -99,3 +99,12 @@ function htpl_content_type_badge_only( $atts ) {
     return '<span class="badge content-type-badge" style="background-color: ' . $badge_color . '; color: #fff;">' . esc_html( $term->name ) . '</span>';
 }
 add_shortcode( 'htpl_content_type_badge_only', 'htpl_content_type_badge_only' );
+
+function htpl_debug_post_context() {
+    $post_id = get_the_ID();
+    $post_type = get_post_type( $post_id );
+    $title = get_the_title( $post_id );
+
+    return "<pre>Current Post ID: $post_id\nPost Type: $post_type\nPost Title: $title</pre>";
+}
+add_shortcode( 'htpl_post_context', 'htpl_debug_post_context' );

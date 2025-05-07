@@ -24,37 +24,65 @@
 }
 
 /* -------------------------------------------------
-   BADGES (for taxonomy terms)
+   BADGE BASE STYLES (UNIVERSAL)
 -------------------------------------------------- */
 
 .badge {
   display: inline-block;
-  padding: 0.25rem 0.5rem;
   font-size: 0.75rem;
   font-weight: bold;
+  padding: 0.25rem 0.5rem;
   border-radius: 6px;
-  color: var(--e-global-color-white, #ffffff);
   line-height: 1;
   margin: 0.25rem 0.25rem 0.25rem 0;
+  background-color: var(--e-global-color-primary, #002d62);
+  color: var(--e-global-color-white, #ffffff);
 }
 
-.badge-eresource       { background-color: var(--e-global-color-teal, #007c91); }
+/* -------------------------------------------------
+   BADGE FALLBACKS FOR TRANSPARENT OR BLANK
+-------------------------------------------------- */
+
+.badge[style*="background-color: transparent"],
+.badge[style=""] {
+  background-color: var(--e-global-color-primary, #002d62) !important;
+  color: var(--e-global-color-white, #ffffff) !important;
+}
+
+/* -------------------------------------------------
+   CONTEXTUAL BADGE COLOR VARIANTS
+-------------------------------------------------- */
+
+.badge-eresource       { background-color: var(--e-global-color-teal, #007c91); color: #fff; }
 .badge-announcement    { background-color: var(--e-global-color-orange, #ffaa4c); color: var(--e-global-color-primary, #002d62); }
-.badge-document        { background-color: var(--e-global-color-primary, #002d62); }
+.badge-document        { background-color: var(--e-global-color-primary, #002d62); color: #fff; }
 .badge-event           { background-color: var(--e-global-color-sky, #8eafcf); color: var(--e-global-color-primary, #002d62); }
-.badge-tutorial        { background-color: var(--e-global-color-sail, #4477aa); }
-.badge-library-service { background-color: var(--e-global-color-gray, #535353); }
+.badge-tutorial        { background-color: var(--e-global-color-sail, #4477aa); color: #fff; }
+.badge-library-service { background-color: var(--e-global-color-gray, #535353); color: #fff; }
+
+/* -------------------------------------------------
+   BADGE WRAPPER STYLES (for badge groups)
+-------------------------------------------------- */
 
 .badge-group {
-  margin-top: 1rem;
   display: flex;
   flex-wrap: wrap;
   gap: 0.25rem;
+  margin-top: 0.5rem;
 }
 
-.content-type-badge {
-  margin-left: 0.5rem;
+/* -------------------------------------------------
+   DEBUG STYLING (for visibility testing - optional)
+-------------------------------------------------- */
+
+/* Uncomment for badge visibility testing */
+/*
+.badge::after {
+  content: " ← badge";
+  font-size: 0.6rem;
+  color: red;
 }
+*/
 
 /* -------------------------------------------------
    ICONS

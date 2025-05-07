@@ -1,0 +1,117 @@
+/* ==========================================================================
+   HTPL v5.0 Global Stylesheet with Fallbacks
+========================================================================== */
+
+/* -------------------------------------------------
+   TYPOGRAPHY UTILITY CLASSES
+-------------------------------------------------- */
+
+.text-eyebrow {
+  font-family: var(--e-global-typography-eyebrow-font-family);
+  font-size: var(--e-global-typography-eyebrow-font-size);
+  font-weight: var(--e-global-typography-eyebrow-font-weight);
+  letter-spacing: var(--e-global-typography-eyebrow-letter-spacing);
+  text-transform: uppercase;
+  color: var(--e-global-color-primary, #002d62);
+}
+
+.text-subheading {
+  font-family: var(--e-global-typography-subheading-font-family);
+  font-size: var(--e-global-typography-subheading-font-size);
+  font-weight: var(--e-global-typography-subheading-font-weight);
+  line-height: var(--e-global-typography-subheading-line-height);
+  color: var(--e-global-color-primary, #002d62);
+}
+
+/* -------------------------------------------------
+   BADGES (content_type, eresource_type, etc.)
+-------------------------------------------------- */
+
+.badge {
+  display: inline-block;
+  padding: 0.25em 0.5em;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border-radius: 0.375rem;
+  line-height: 1.2;
+  color: var(--e-global-color-white, #ffffff);
+}
+
+.badge-eresource       { background-color: var(--e-global-color-teal, #007c91); }
+.badge-announcement    { background-color: var(--e-global-color-orange, #ffaa4c); color: var(--e-global-color-primary, #002d62); }
+.badge-document        { background-color: var(--e-global-color-primary, #002d62); }
+.badge-event           { background-color: var(--e-global-color-sky, #8eafcf); color: var(--e-global-color-primary, #002d62); }
+.badge-tutorial        { background-color: var(--e-global-color-sail, #4477aa); }
+.badge-library-service { background-color: var(--e-global-color-gray, #535353); }
+
+/* -------------------------------------------------
+   BUTTON ENHANCEMENTS
+-------------------------------------------------- */
+
+.button,
+.elementor-button {
+  border-radius: 0.5rem;
+  font-family: var(--e-global-typography-accent-font-family);
+  font-weight: 600;
+  padding: 0.75em 1.5em;
+  background-color: var(--e-global-color-secondary, #007c91);
+  color: var(--e-global-color-white, #ffffff);
+}
+
+.button:hover,
+.elementor-button:hover {
+  background-color: var(--e-global-color-teal-hover, #005f73);
+  color: var(--e-global-color-white, #ffffff);
+}
+
+/* -------------------------------------------------
+   FORMS
+-------------------------------------------------- */
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+textarea,
+select {
+  font-family: var(--e-global-typography-text-font-family);
+  font-size: var(--e-global-typography-text-font-size);
+  background-color: var(--e-global-color-offwhite, #f5f5f5);
+  color: var(--e-global-color-gray, #535353);
+  padding: 0.75em;
+  border: 1px solid #ccc;
+  border-radius: 0.375rem;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--e-global-color-secondary, #007c91);
+  outline: none;
+}
+
+/* -------------------------------------------------
+   LAYOUT HELPERS
+-------------------------------------------------- */
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.section {
+  padding: 4rem 1rem;
+}
+
+/* -------------------------------------------------
+   LINK STYLES (Optional override)
+-------------------------------------------------- */
+
+a {
+  color: var(--e-global-color-primary, #002d62);
+  text-decoration: underline;
+}
+
+a:hover {
+  color: var(--e-global-color-orange-hover, #e69936);
+}
